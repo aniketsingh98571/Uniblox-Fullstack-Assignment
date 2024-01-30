@@ -18,6 +18,7 @@ export default function Main(){
             category:"Vehicle",
             price:"6599",
         },
+        
     ]
     const cards=[
         {

@@ -7,7 +7,7 @@ export default function Header(){
                 <div className={classes.BrandNameContainer}>
                     <p>Uniblox Insurance</p>
                 </div>
-                <div className={classes.CartButton}>
+                <div className={classes.CartButton} onClick={()=>window.location.href="/checkout"}>
                     <button type="button">CART</button>
                 </div>
             </div>

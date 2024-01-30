@@ -1,5 +1,13 @@
+.OuterContentsContainer{
+    height: 100%;
+    width: 100%;
+}
+.InnerContentsContainer{
+    padding: 15px;
+    box-sizing: border-box;
+}
 .ActionsContainer{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;

@@ -1,0 +1,46 @@
+.CheckoutText p{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.InnerCheckoutPage{
+    padding: 10px;
+}
+.BelowCheckoutPage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.LeftContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+}
+.TotalContainer{
+    width: 40%;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.SubtotalContainer,.TotalPrice{
+    margin: 0 0 10px 0;
+}
+.SubtotalContainer span,.TotalPrice span,.PriceContainer span{
+    font-size: 18px;
+    font-weight: bold;
+}
+.CouponCode input{
+    padding: 8px 0;
+    outline: none;
+
+}
+.CouponCode button,.PlaceOrder button{
+    background-color: #ff6e6c;
+    color: #1f1235;
+    padding: 8px 20px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+.TotalPrice{
+    margin: 10px 0 0 0;
+}

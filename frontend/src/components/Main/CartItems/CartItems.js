@@ -13,6 +13,10 @@ export default function CartItems({cartItems}){
                     })
                 }
             </div>
+            <div className={classes.ButtonContainer}>
+                <button type="button">Update</button>
+            </div>
+           
         </div>
     )
 }

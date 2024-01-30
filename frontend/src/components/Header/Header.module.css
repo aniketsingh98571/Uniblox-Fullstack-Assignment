@@ -1,3 +1,6 @@
+.OuterHeaderContainer{
+    height: 10%;
+}
 .InnerHeaderContainer{
     background-color: #FFFFFF;
     padding: 10px;
@@ -6,6 +9,7 @@
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
+    height: 100%;
 }
 .BrandNameContainer p{
     color: #1f1235;

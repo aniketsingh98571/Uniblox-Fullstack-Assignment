@@ -8,6 +8,9 @@ export default function CartIem({item}){
                     <div className={classes.ImageContainer}>
                         <img src={item.image}/>
                     </div>
+                    <div className={classes.NameContainer}>
+                        <p>{item.name}</p>
+                    </div>
                     <div className={classes.ActionsContainer}>
                         <div className={classes.AmountContainer}>
                             <select name="amount" id="amount">

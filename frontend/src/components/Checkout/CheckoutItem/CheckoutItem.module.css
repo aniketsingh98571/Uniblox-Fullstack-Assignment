@@ -1,0 +1,23 @@
+.OuterItemContainer{
+    width: 23%;
+}
+.InnerItemContainer{
+    background-color: #301e4e;
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.ImageContainer img{
+    width: 100%;
+    object-fit: cover;
+}
+.QuantityContainer p,.PriceContainer p{
+    color: #ffffff;
+    margin: 5px 0 0 0;
+}
+.QuantityContainer span,.PriceContainer span{
+    font-size: 18px;
+    font-weight: bold;
+}
