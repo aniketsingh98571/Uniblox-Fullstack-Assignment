@@ -1,0 +1,16 @@
+.ActionsContainer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 30px 0;
+    box-sizing: border-box;
+}
+.SearchContainer input,.SortContainer select{
+    width: 200px;
+    padding: 8px 5px;
+    border: 2px solid #1b1325;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

@@ -1,3 +1,20 @@
-.Start{
-    color: red;
+.InnerHeaderContainer{
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.BrandNameContainer p{
+    color: #1f1235;
+    font-size: 20px;
+    font-weight: bold;
+}
+.CartButton button{
+    background-color: #ff6e6c;
+    color: #1f1235;
+    padding: 8px 20px;
+    font-weight: bold;
 }

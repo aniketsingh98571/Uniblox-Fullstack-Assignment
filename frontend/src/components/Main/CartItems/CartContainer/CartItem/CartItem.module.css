@@ -1,0 +1,12 @@
+.InnerCartItem{
+    width: 50%;
+    height: 200px;
+}
+.Cart{
+    width: 100%;
+    height: 200px;
+}
+.ImageContainer img{
+    width: 100%;
+    object-fit: cover;
+}

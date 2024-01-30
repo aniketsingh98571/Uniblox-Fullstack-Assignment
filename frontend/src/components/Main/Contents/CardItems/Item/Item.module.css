@@ -1,0 +1,31 @@
+.OuterItemContainer{
+    width: 20%;
+    background-color: #e2daeb;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 250px;
+}
+.ImageContainer img{
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+.InsuranceName p,.InsuranceCategory p{
+    margin: 5px 0 0 0;
+}
+.InsuranceName span,.InsuranceCategory span{
+    font-weight: bold;
+}
+.CardActions{
+    margin: 5px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.CardActions button{
+    background-color: #ff6e6c;
+    color: #1f1235;
+    padding: 8px 20px;
+    font-weight: bold;
+}

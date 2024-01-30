@@ -1,0 +1,13 @@
+.InnerMainContainer{
+   padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.ContentsContainer{
+    width: 70%;
+    background-color: #f4effc;
+}
+.CartItems{
+    width: 30%;
+    background-color: #301e4e;
+}
