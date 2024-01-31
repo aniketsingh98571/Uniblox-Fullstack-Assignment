@@ -3,6 +3,8 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import classes from './App.module.css'
 import Checkout from "./components/Checkout/Checkout";
+import { ProductProvider } from "./contexts/ProductContext";
+import { CartProvider } from "./contexts/CartContext";
 import {
   BrowserRouter as Router,
   useRoutes,
@@ -18,10 +20,14 @@ const AppWrapper = () => {
 const App = () => {
   return (
     <div className={classes.AppContainer}>
-      <Header/>
-      <Router>
-      <AppWrapper />
-    </Router>
+      <CartProvider>
+        <ProductProvider>
+          <Header/>
+          <Router>
+            <AppWrapper />
+        </Router>
+      </ProductProvider>
+    </CartProvider>
     </div>
   );
 };

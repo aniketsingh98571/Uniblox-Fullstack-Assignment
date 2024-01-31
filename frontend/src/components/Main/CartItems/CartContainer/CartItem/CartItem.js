@@ -1,6 +1,8 @@
 import React from "react"
 import classes from './CartItem.module.css'
+import { useCart } from "../../../../../contexts/CartContext"
 export default function CartIem({item}){
+    const {deleteCart,quantityHandler}=useCart()
     return(
         <div className={classes.OuterCartItem}>
             <div className={classes.InnerCartItem}>
@@ -11,15 +13,21 @@ export default function CartIem({item}){
                     <div className={classes.NameContainer}>
                         <p>{item.name}</p>
                     </div>
-                    <div className={classes.ActionsContainer}>
-                        <div className={classes.AmountContainer}>
-                            <select name="amount" id="amount">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>    
+                    <div className={classes.ActionsContainer}>.
+                    <div className={classes.AmountContainer}>
+                       <select name="amount" id="amount" value={item.selectedQuantity} onChange={(e)=>quantityHandler(item,e)}>
+                        {
+                            item.quantityArray.map((quantity)=>{
+                                return (
+                                     <option value={quantity.value}>{quantity.name}</option>
+                                  )
+                            })
+                   
+                         }
+                           </select>    
                         </div>
                         <div className={classes.DeleteButton}>
-                            <button type="button">Delete</button>
+                            <button type="button" onClick={()=>deleteCart(item)}>Delete</button>
                         </div>
                     </div>
                 </div>

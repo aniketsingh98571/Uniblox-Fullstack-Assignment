@@ -1,6 +1,8 @@
 import React from "react"
 import classes from './Item.module.css'
+import { useCart } from "../../../../../contexts/CartContext"
 export default function Item({insurance}){
+    const {addCart,cartIds}=useCart()
     return (
         <div className={classes.OuterItemContainer}>
             <div className={classes.InnerItemContainer}>
@@ -14,9 +16,12 @@ export default function Item({insurance}){
                     <div className={classes.InsuranceCategory}>
                         <p><span>Category: </span>{insurance.category}</p>
                     </div>
-                    <div className={classes.CardActions}>
+                     <div className={classes.CardActions}>
                         <p>Rs {insurance.price}</p>
-                        <button type="button">Add to Cart</button>
+                        {
+                            !cartIds.includes(insurance.id)&&
+                            <button type="button" onClick={()=>addCart(insurance)}>Add to Cart</button>
+                          }
                     </div>
                 </div>
             </div>

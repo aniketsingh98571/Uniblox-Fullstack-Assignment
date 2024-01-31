@@ -27,6 +27,7 @@ export default function Main(){
             name:"Bupa Insurance",
             category:"Health",
             price:"2599",
+            quantity:5
         },
         {
             id:2,
@@ -34,6 +35,7 @@ export default function Main(){
             name:"Nuva Insurance",
             category:"Vehicle",
             price:"6599",
+            quantity:5
         },
         {
             id:3,
@@ -41,6 +43,7 @@ export default function Main(){
             name:"Alexis Insurance",
             category:"Pets",
             price:"2559",
+            quantity:4
         },
         {
             id:4,
@@ -48,13 +51,15 @@ export default function Main(){
             name:"HDFC Insurance",
             category:"Human",
             price:"12559",
+            quantity:5
         },
         {
             id:5,
             image:"https://cdn.pixabay.com/photo/2022/03/13/01/33/insurance-7065113_1280.png",
             name:"Apple Insurance",
-            category:"Pets",
+            category:"Accessories",
             price:"25559",
+            quantity:3
         },
 
     ]
@@ -62,10 +67,10 @@ export default function Main(){
         <div className={classes.OuterMainContainer}>
             <div className={classes.InnerMainContainer}>
                 <div className={classes.ContentsContainer}>
-                    <Contents cards={cards}/>
+                    <Contents/>
                 </div>
                 <div className={classes.CartItems}>
-                    <CartItems cartItems={cartItems}/>
+                    <CartItems/>
                 </div>
             </div>
         </div>
