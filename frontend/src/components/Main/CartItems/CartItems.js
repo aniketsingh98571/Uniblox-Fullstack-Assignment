@@ -2,12 +2,16 @@ import React from "react"
 import classes from './CartItems.module.css'
 import CartIem from "./CartContainer/CartItem/CartItem"
 import { useCart } from "../../../contexts/CartContext"
-export default function CartItems({cartItems}){
+export default function CartItems(){
     const {cartData}=useCart()
+    let price=cartData.reduce((total,num)=>{
+        return total + (Number(num.selectedQuantity)*Number(num.price));
+    },0);
+    
     return (
-        <div className={classes.OuterCartItem}>
+        <div className={classes.OuterCartItem}> 
             <div className={classes.TotalPriceContainer}>
-                <p><span>Total Price:</span>0</p>
+                <p><span>Total Price:</span>{price}</p>
             </div>
             <div className={classes.InnerCartItem}>
                 {

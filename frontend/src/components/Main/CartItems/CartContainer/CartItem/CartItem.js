@@ -19,7 +19,7 @@ export default function CartIem({item}){
                         {
                             item.quantityArray.map((quantity)=>{
                                 return (
-                                     <option value={quantity.value}>{quantity.name}</option>
+                                     <option key={quantity.value} value={quantity.value}>{quantity.name}</option>
                                   )
                             })
                    
