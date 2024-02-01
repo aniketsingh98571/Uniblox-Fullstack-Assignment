@@ -42,7 +42,7 @@
 .DeleteButton{
     width: 55%;
 }
-.DeleteButton button{
+.DeleteButton button,.UpdateButton button{
     width: 100%;
     padding: 5px 0;
     box-sizing: border-box;
@@ -50,4 +50,8 @@
     border-radius: 5px;
     text-align: center;
     outline: none;
+}
+.UpdateButton{
+    text-align: center;
+    margin: 5px 0 0 0;
 }

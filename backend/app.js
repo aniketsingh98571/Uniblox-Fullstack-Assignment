@@ -23,11 +23,13 @@ app.use(function(req, res, next) {
     next();
   });
 
-  app.use("/products", productRoutes);
-  app.use("/cart",cartRoutes)
   //using the bodyParser
 app.use(bodyParser.json()); //application/json
 
+
+
+app.use("/products", productRoutes);
+app.use("/cart",cartRoutes)
 // Solving the CORS errors
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*"); //Allowing the access from all the domains

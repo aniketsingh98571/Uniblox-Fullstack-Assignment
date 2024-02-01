@@ -2,7 +2,7 @@ import React from "react"
 import classes from './CartItem.module.css'
 import { useCart } from "../../../../../contexts/CartContext"
 export default function CartIem({item}){
-    const {deleteCart,quantityHandler}=useCart()
+    const {deleteCart,quantityHandler,updateCart}=useCart()
     return(
         <div className={classes.OuterCartItem}>
             <div className={classes.InnerCartItem}>
@@ -29,6 +29,9 @@ export default function CartIem({item}){
                         <div className={classes.DeleteButton}>
                             <button type="button" onClick={()=>deleteCart(item)}>Delete</button>
                         </div>
+                    </div>
+                    <div className={classes.UpdateButton}>
+                        <button type="button" onClick={()=>updateCart(item)}>Update</button>
                     </div>
                 </div>
             </div>
