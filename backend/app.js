@@ -13,6 +13,7 @@ const app = express();
 app.use(cors());
 const productRoutes=require('./routes/Products')
 const cartRoutes=require("./routes/Cart")
+const couponRoutes=require("./routes/Admin")
 
 //function to set headers for the cors
 app.use(function(req, res, next) {
@@ -30,6 +31,7 @@ app.use(bodyParser.json()); //application/json
 
 app.use("/products", productRoutes);
 app.use("/cart",cartRoutes)
+app.use("/coupon",couponRoutes)
 // Solving the CORS errors
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*"); //Allowing the access from all the domains

@@ -1,5 +1,4 @@
 const {generateCouponCode}=require("../utils/generateCoupon")
-let previousCoupons=[]
 let currentCoupon;
 exports.getCoupon=(req,res,next)=>{
     const coupon=generateCouponCode()
@@ -9,4 +8,11 @@ exports.getCoupon=(req,res,next)=>{
 }
 exports.validateCoupon=(req,res,next)=>{
     const payload=req.body
+   if(payload.coupon===currentCoupon){
+        res.status(200).json({message:"Valid Coupon"})
+        currentCoupon=""
+    }
+    else{
+        res.status(403).json({message:"Invalid Coupon"})
+    }
 }

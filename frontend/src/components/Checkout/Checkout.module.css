@@ -44,3 +44,12 @@
 .TotalPrice{
     margin: 10px 0 0 0;
 }
+.CouponCode{
+    margin: 0 0 10px 0;
+}
+.NoPurchases p{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px 0 0 0;
+}

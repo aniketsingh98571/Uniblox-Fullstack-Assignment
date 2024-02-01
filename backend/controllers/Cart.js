@@ -1,4 +1,6 @@
 let cart=[];
+let purchased=[]
+let orderCount=0
 exports.addCart=(req,res,next)=>{
     const payload=req.body
     console.log(payload.item)
@@ -24,4 +26,12 @@ exports.updateCart=(req,res,next)=>{
             }
         res.status(200).json({message:"Cart Updated Successfully"})
     }
+}
+exports.purchaseCart=(req,res,next)=>{
+    const payload=req.body
+    cart=[]
+    orderCount++
+    const order={[`Order ${orderCount} `]:payload.order}
+    purchased.push(order)
+    res.status(200).json({message:"Purchased Confirmed"})
 }

@@ -1,4 +1,4 @@
-export function generateCouponCode() {
+ exports.generateCouponCode=()=> {
     let code = '';
     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -8,5 +8,6 @@ export function generateCouponCode() {
 
     return code;
 }
+
 
 
