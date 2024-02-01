@@ -1,6 +1,6 @@
 import axios from 'axios';
 const axiosClient = axios.create({
-	baseURL:'http://localhost:8080/'
+	baseURL:'https://sore-jade-quail-wrap.cyclic.app/'
 });
   export function getRequest(URL,payload) {
     return axiosClient.get(`/${URL}`,payload).then(response => response);
