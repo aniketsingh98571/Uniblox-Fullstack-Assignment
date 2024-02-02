@@ -21,4 +21,11 @@
     color: #1f1235;
     padding: 8px 20px;
     font-weight: bold;
+    position: relative;
+}
+.CartButton button p{
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    font-weight: 600;
 }

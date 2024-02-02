@@ -42,9 +42,13 @@ exports.updateCart=(req,res,next)=>{
 }
 exports.purchaseCart=(req,res,next)=>{
     const payload=req.body
+    console.log(payload)
     cart=[]
-    orderCount++
-    const order={[`Order ${orderCount} `]:payload.order}
-    purchased.push(order)
+    // orderCount++
+    // const order={[`Order ${orderCount} `]:payload}
+    purchased.push(payload)
     res.status(200).json({message:"Purchased Confirmed"})
+}
+exports.getPurchaseItems=()=>{
+    return purchased
 }

@@ -42,7 +42,13 @@ export default function Checkout(){
         setCouponValue(e.target.value)
     }
     const placeOrderHandler=async()=>{
-        const results=await postRequest("cart/purchase",cartData)
+        const payload={
+            cartData,
+            discountAmount:discountedPrice,
+            totalAmount:priceDataRef.current,
+            couponApplied:couponValue
+        }
+        const results=await postRequest("cart/purchase",payload)
         if(results.status===200){
             alert("Purchased Confirmed")
             window.location.href="/"
