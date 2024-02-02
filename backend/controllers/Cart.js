@@ -13,18 +13,31 @@ exports.getCart=(req,res,next)=>{
 exports.updateCart=(req,res,next)=>{
     const payload=req.body
     if(payload.action==="delete"){
-        cart=cart.filter((item)=>{
-            return payload.data.id!==item.id
-        })
-        res.status(200).json({message:"Item Deleted Successfully"})
+        const originalCartLength = cart.length;
+         cart = cart.filter((item) => {
+            return payload.data.id !== item.id;
+        });
+        
+        if (cart.length < originalCartLength) {
+            res.status(200).json({message: "Item Deleted Successfully"});
+        } else {
+            res.status(400).json({message: "Item not found in cart"});
+        }
     }
     else if(payload.action==="update"){
-            for(i=cart.length-1;i>=0;i--){
-                if(cart[i].id===payload.data.id){
-                    cart.splice(i,1,payload.data)
-                }
+        let itemUpdated = false;
+        for(let i = cart.length - 1; i >= 0; i--){
+            if(cart[i].id === payload.data.id){
+                cart.splice(i, 1, payload.data);
+                itemUpdated = true;
+                break;
             }
-        res.status(200).json({message:"Cart Updated Successfully"})
+        }
+        if(itemUpdated) {
+            res.status(200).json({message: "Cart Updated Successfully"});
+        } else {
+            res.status(400).json({message: "Item not found in cart"});
+        }
     }
 }
 exports.purchaseCart=(req,res,next)=>{
